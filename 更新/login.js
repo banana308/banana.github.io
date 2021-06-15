@@ -3,7 +3,7 @@ function myfunction(){
 		 };
 		 
 function Logout() {
-	window.location.href="Banana.html"; 
+	window.location.href="index.html"; 
 };
 		 
 
