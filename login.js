@@ -28,21 +28,22 @@ function check(){
 	if (username || password){
 			alert("输入账号，密码不能为空"); 
 	}
-	
-	
-	var url="http://172.23.27.64:8888/login?username="+username+"&password="+password;   
-	         
-	//1.创建XMLHttpRequest组建    
-	xmlHttpRequest= createXmlHttpRequest();    
+	else{
+		var url="http://172.23.27.64:8888/login?username="+username+"&password="+password;
+		         
+		//1.创建XMLHttpRequest组建    
+		xmlHttpRequest= createXmlHttpRequest();    
+			
+		//2.设置回调函数    
+		xmlHttpRequest.onreadystatechange = zswFun;    
+			
+		//3.初始化XMLHttpRequest组建    
+		xmlHttpRequest.open("GET",url,true);    
+			
+		//4.发送请求    
+		xmlHttpRequest.send(null); 
 		
-	//2.设置回调函数    
-	xmlHttpRequest.onreadystatechange = zswFun;    
-		
-	//3.初始化XMLHttpRequest组建    
-	xmlHttpRequest.open("GET",url,true);    
-		
-	//4.发送请求    
-	xmlHttpRequest.send(null); 
+	}
 }
 
 //登录校验，回调函数获取数据   
