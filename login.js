@@ -25,7 +25,9 @@ function check(){
 	var username=document.getElementById("name02").value;
 	var password=document.getElementById("password02").value;
 	console.log("输入账号："+username+"\n"+"输入密码："+password);
-	
+	if (username || password){
+			alert("输入账号，密码不能为空"); 
+	}
 	
 	
 	var url="http://172.23.27.64:8888/login?username="+username+"&password="+password;   
