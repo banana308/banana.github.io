@@ -25,7 +25,12 @@ function check(){
 	var username=document.getElementById("name02").value;
 	var password=document.getElementById("password02").value;
 	console.log("输入账号："+username+"\n"+"输入密码："+password);
-	if (username || password){
+	
+	
+	/判断输入是否为空
+	user=document.getElementById("name02").value=="";
+	pswo2=document.getElementById("password02").value=="";
+	if (user || pswo2){
 			alert("输入账号，密码不能为空"); 
 	}
 	else{
